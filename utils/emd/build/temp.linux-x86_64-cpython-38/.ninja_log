@@ -1,0 +1,3 @@
+# ninja log v5
+3	16153	1668991494000000000	/lustre/home/robert/codes/StructureEmbeddings/SE3PCNet/utils/emd/build/temp.linux-x86_64-cpython-38/emd_cuda.o	3881e6de5b433a61
+2	19719	1668991498000000000	/lustre/home/robert/codes/StructureEmbeddings/SE3PCNet/utils/emd/build/temp.linux-x86_64-cpython-38/emd.o	273d6ee1fcbcdd6d

@@ -1,0 +1,3 @@
+# ninja log v5
+1	10091	1648717212729276415	/home/robert/codes/StructureEmbedding/VRCNet-main/utils/ChamferDistancePytorch/chamfer3D/build/temp.linux-x86_64-3.8/chamfer3D.o	8fbe6a7a871f5a08
+0	18882	1648717221512287784	/home/robert/codes/StructureEmbedding/VRCNet-main/utils/ChamferDistancePytorch/chamfer3D/build/temp.linux-x86_64-3.8/chamfer_cuda.o	2a3ed56e315c41bf

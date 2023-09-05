@@ -1,0 +1,161 @@
+running install
+running bdist_egg
+running egg_info
+writing pointnet2.egg-info/PKG-INFO
+writing dependency_links to pointnet2.egg-info/dependency_links.txt
+writing top-level names to pointnet2.egg-info/top_level.txt
+reading manifest file 'pointnet2.egg-info/SOURCES.txt'
+writing manifest file 'pointnet2.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_ext
+building 'pointnet2_cuda' extension
+Emitting ninja build file /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/build.ninja...
+Compiling objects...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+[1/1] c++ -MMD -MF /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/ball_query.o.d -pthread -B /home/robert/anaconda3/envs/testenv/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include -I/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/TH -I/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/THC -I/usr/local/cuda/include -I/home/robert/anaconda3/envs/testenv/include/python3.8 -c -c /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp -o /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/ball_query.o -g -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=pointnet2_cuda -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++14
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+In file included from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Parallel.h:140,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/TH/THTensorApply.h:4,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/TH/THTensor.h:5,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/THC/THCTensor.h:4,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/THC/THC.h:12,
+                 from /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:3:
+/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/ParallelOpenMP.h:87: warning: ignoring #pragma omp parallel [-Wunknown-pragmas]
+ #pragma omp parallel for if ((end - begin) >= grain_size)
+ 
+In file included from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/c10/util/Optional.h:30,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+                 from /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:1:
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp: In function ‘int ball_query_wrapper_fast(int, int, int, float, int, at::Tensor, at::Tensor, at::Tensor)’:
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:10:42: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+ #define CHECK_CUDA(x) TORCH_CHECK(x.type().is_cuda(), #x, " must be a CUDAtensor ")
+                                          ^
+/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/c10/macros/Macros.h:195:64: note: in definition of macro ‘C10_UNLIKELY’
+ #define C10_UNLIKELY(expr) (__builtin_expect(static_cast<bool>(expr), 0))
+                                                                ^~~~
+/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/c10/util/Exception.h:430:7: note: in expansion of macro ‘C10_UNLIKELY_OR_CONST’
+   if (C10_UNLIKELY_OR_CONST(!(cond))) {            \
+       ^~~~~~~~~~~~~~~~~~~~~
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:10:23: note: in expansion of macro ‘TORCH_CHECK’
+ #define CHECK_CUDA(x) TORCH_CHECK(x.type().is_cuda(), #x, " must be a CUDAtensor ")
+                       ^~~~~~~~~~~
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:12:24: note: in expansion of macro ‘CHECK_CUDA’
+ #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+                        ^~~~~~~~~~
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:16:5: note: in expansion of macro ‘CHECK_INPUT’
+     CHECK_INPUT(new_xyz_tensor);
+     ^~~~~~~~~~~
+In file included from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Tensor.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Context.h:4,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/ATen.h:9,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+                 from /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:1:
+/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:338:30: note: declared here
+   DeprecatedTypeProperties & type() const {
+                              ^~~~
+In file included from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/c10/util/Optional.h:30,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+                 from /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:1:
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:10:42: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+ #define CHECK_CUDA(x) TORCH_CHECK(x.type().is_cuda(), #x, " must be a CUDAtensor ")
+                                          ^
+/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/c10/macros/Macros.h:195:64: note: in definition of macro ‘C10_UNLIKELY’
+ #define C10_UNLIKELY(expr) (__builtin_expect(static_cast<bool>(expr), 0))
+                                                                ^~~~
+/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/c10/util/Exception.h:430:7: note: in expansion of macro ‘C10_UNLIKELY_OR_CONST’
+   if (C10_UNLIKELY_OR_CONST(!(cond))) {            \
+       ^~~~~~~~~~~~~~~~~~~~~
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:10:23: note: in expansion of macro ‘TORCH_CHECK’
+ #define CHECK_CUDA(x) TORCH_CHECK(x.type().is_cuda(), #x, " must be a CUDAtensor ")
+                       ^~~~~~~~~~~
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:12:24: note: in expansion of macro ‘CHECK_CUDA’
+ #define CHECK_INPUT(x) CHECK_CUDA(x);CHECK_CONTIGUOUS(x)
+                        ^~~~~~~~~~
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:17:5: note: in expansion of macro ‘CHECK_INPUT’
+     CHECK_INPUT(xyz_tensor);
+     ^~~~~~~~~~~
+In file included from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Tensor.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Context.h:4,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/ATen.h:9,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+                 from /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:1:
+/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:338:30: note: declared here
+   DeprecatedTypeProperties & type() const {
+                              ^~~~
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:18:55: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     const float *new_xyz = new_xyz_tensor.data<float>();
+                                                       ^
+In file included from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Tensor.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Context.h:4,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/ATen.h:9,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+                 from /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:1:
+/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:501:7: note: declared here
+   T * data() const {
+       ^~~~
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:19:47: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     const float *xyz = xyz_tensor.data<float>();
+                                               ^
+In file included from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Tensor.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Context.h:4,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/ATen.h:9,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+                 from /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:1:
+/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:501:7: note: declared here
+   T * data() const {
+       ^~~~
+/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:20:37: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+     int *idx = idx_tensor.data<int>();
+                                     ^
+In file included from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Tensor.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/Context.h:4,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/ATen.h:9,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/types.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/input-archive.h:6,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/archive.h:3,
+                 from /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/serialize/tensor.h:3,
+                 from /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/src/ball_query.cpp:1:
+/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:501:7: note: declared here
+   T * data() const {
+       ^~~~
+creating build/lib.linux-x86_64-3.8
+g++ -pthread -shared -B /home/robert/anaconda3/envs/testenv/compiler_compat -L/home/robert/anaconda3/envs/testenv/lib -Wl,-rpath=/home/robert/anaconda3/envs/testenv/lib -Wl,--no-as-needed -Wl,--sysroot=/ /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/pointnet2_api.o /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/ball_query.o /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/ball_query_gpu.o /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/group_points.o /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/group_points_gpu.o /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/interpolate.o /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/interpolate_gpu.o /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/sampling.o /home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/sampling_gpu.o -L/home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/torch/lib -L/usr/local/cuda/lib64 -lc10 -ltorch -ltorch_cpu -ltorch_python -lcudart -lc10_cuda -ltorch_cuda_cu -ltorch_cuda_cpp -o build/lib.linux-x86_64-3.8/pointnet2_cuda.cpython-38-x86_64-linux-gnu.so
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+copying build/lib.linux-x86_64-3.8/pointnet2_cuda.cpython-38-x86_64-linux-gnu.so -> build/bdist.linux-x86_64/egg
+creating stub loader for pointnet2_cuda.cpython-38-x86_64-linux-gnu.so
+byte-compiling build/bdist.linux-x86_64/egg/pointnet2_cuda.py to pointnet2_cuda.cpython-38.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying pointnet2.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying pointnet2.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying pointnet2.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying pointnet2.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+writing build/bdist.linux-x86_64/egg/EGG-INFO/native_libs.txt
+creating dist
+creating 'dist/pointnet2-0.0.0-py3.8-linux-x86_64.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing pointnet2-0.0.0-py3.8-linux-x86_64.egg
+creating /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/pointnet2-0.0.0-py3.8-linux-x86_64.egg
+Extracting pointnet2-0.0.0-py3.8-linux-x86_64.egg to /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages
+Adding pointnet2 0.0.0 to easy-install.pth file
+
+Installed /home/robert/anaconda3/envs/testenv/lib/python3.8/site-packages/pointnet2-0.0.0-py3.8-linux-x86_64.egg
+Processing dependencies for pointnet2==0.0.0
+Finished processing dependencies for pointnet2==0.0.0

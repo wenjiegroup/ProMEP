@@ -1,0 +1,9 @@
+# ninja log v5
+3	14790	1648717638300827276	/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/interpolate_gpu.o	65d473ad4e1977b4
+2	15102	1648717638611827679	/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/group_points_gpu.o	409348bbd5a2d37
+1	15436	1648717638945828111	/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/ball_query_gpu.o	caf3fb1cacec1e92
+4	15653	1648717639160828390	/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/sampling_gpu.o	8fda8d48d0dd6cf9
+0	19997	1648717643498834005	/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/pointnet2_api.o	33dcee480b032da6
+4	5717	1648719130579846825	/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/interpolate.o	ea68174bee0e616f
+4	6013	1648719130874847230	/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/group_points.o	cb3c1961790d7d9b
+5	6533	1648719131393847944	/home/robert/codes/StructureEmbedding/VRCNet-main/utils/Pointnet2.PyTorch/pointnet2/build/temp.linux-x86_64-3.8/src/sampling.o	22142e954baed670
