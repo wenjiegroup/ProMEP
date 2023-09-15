@@ -1,5 +1,6 @@
 # ProMEP
 Zero-shot prediction of mutation effects on protein function with multimodal deep representation learning
+<<<<<<< HEAD
 
 ## Quick Start 
 As a prerequisite, you must have  [SE(3)-Transformers](https://github.com/NVIDIA/DeepLearningExamples/tree/master/DGLPyTorch/DrugDiscovery/SE3Transformer) installed to use this repository.
@@ -25,3 +26,5 @@ Zero-shot prediction of mutation effects
 ```python
 python predict_mutation_effects.py testdata/fitness_prediction.h5 
 ```
+=======
+>>>>>>> origin/main
