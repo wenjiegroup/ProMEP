@@ -37,8 +37,8 @@ def main():
     seq_len = np.array(hf.get('seq_len'))
 
     alphabet = myesm.Alphabet.default_alphabet()
-
     offset_idx = 1
+    offset_dict = {'POLG_HCVJF_Qi_2014':1515, 'SCN5A_HUMAN_Glazer_2019':1144, 'UBE4B_MOUSE_Starita_2013':363, 'BRCA1_HUMAN_Findlay_2018_p2':1014}
     Seq_dict = {}
 
     name = ''
@@ -60,6 +60,10 @@ def main():
 
     for i, seq in enumerate(Seq_Name):
         df = pd.read_csv(os.path.join(root_path, seq+'.csv'))
+        if seq in offset_dict.keys():
+            offset_idx = offset_dict[seq]
+        else:
+            offset_idx = 1
         token_probs = torch.log_softmax(torch.from_numpy(all_data[i]), dim=-1)
         df['predicted'] = df.apply(
             lambda row: label_row(
