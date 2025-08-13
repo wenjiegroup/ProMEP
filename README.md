@@ -26,5 +26,19 @@ Zero-shot prediction of mutation effects
 ```python
 python predict_mutation_effects.py testdata/fitness_prediction.h5 
 ```
+
+## ProMEP-guided protein engineering
+To guide protein engineering, users need to generate the 'fitness_prediction.h5' file following the above instructions and provide the raw sequence. Then run 1_dms_scanning.py to:
+1) generate the virtual single-point saturation mutagenesis library
+2) calculate fitness scores for all mutants
+3) and rank them accordingly
+
+# examples
+```python
+cd examples
+python 1_dms_scanning.py
+```
+Protein mutants sorted by fitness score will be stored in 'dms_data/scanning-cas9.csv', while the fitness score for each mutant will be recorded in 'score_data/cas9-score.csv'.
+
 =======
 >>>>>>> origin/main
